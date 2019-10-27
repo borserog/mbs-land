@@ -1,0 +1,679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>MBS - Manaíra Bairro Sopping</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200,300,400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl.theme.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="img/mbs/favicon.png">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+    
+    <meta property="og:site_name" content="MBS - Manaira Bairro Shopping">
+	<meta property="og:title" content="Manaira Bairro Shopping" />
+	<meta property="og:description" content="O Manaíra Bairro Shopping(MBS), é uma nova forma de conhecer e comprar produtos e serviços na região de Manaíra; bairro com mais de 3 mil empresas instaladas. O MBS oferece agilidade, comodidade, segurança e promoções exclusivas. É aqui onde consumidores e empresários se encontram" />
+	<meta property="og:image" content="http://www.manairabairroshopping.com/img/logoMBS.jpg">
+	<meta property="og:type" content="website" />
+ 	
+	<script language='JavaScript'>
+		function SomenteNumero(e){
+		    var tecla=(window.event)?event.keyCode:e.which;   
+		    if((tecla>47 && tecla<58)) return true;
+		    else{
+		    	if (tecla==8 || tecla==0) return true;
+			else  return false;
+		    }
+		}
+	</script>
+    
+</head>
+
+<style>
+	.animated-nav {
+	    /* background: #e9453d !important; */
+	    background-image: url(../img/fundoDegrade.png) !important;
+		-webkit-background-size: cover !important;
+		background-size: cover !important;
+	}
+	.clients {
+	    background: #e9453d;
+	}
+	.hireus-area {
+	    background: #e9453d;
+	}
+	.newsletter {
+	    background: #e9453d;
+	}
+	
+	.hero-area {
+	    width: 100%;
+	    height: 100vh;
+	    position: relative;
+	    z-index: 0;
+	    background: #e9453d;
+	    overflow: hidden;
+	    background-image: url(../img/r.png);
+	    -webkit-background-size: cover;
+	    background-size: cover;
+	}
+	
+	@media(max-width:500px){    
+		.hero-area {
+		    width: 100%;
+		    height: 100vh;
+		    position: relative;
+		    z-index: 0;
+		    background: #e9453d;
+		    overflow: hidden;
+		    background-image: url(../img/homeCell.png);
+		    -webkit-background-size: cover;
+		    background-size: cover;
+		}
+	flavor
+	}
+	
+	.fundoDegrade{
+		background-image: url(../img/fundoDegrade.png);
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+	
+</style>
+
+<body data-spy="scroll" data-target="#scroll-menu" data-offset="120">
+
+    <!-- Preloader Starts -->
+    <div class="preloader-area">
+        <div class="preloader-inner">
+            <div class="preloader">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Ends -->
+    <!-- Header Area Starts -->
+    <header id="home" class="header-area" >
+        <nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="img/logo.png" alt="Alioo" height="164" width="180"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#home" class="smoothscroll">Home</a></li>
+                        <li><a href="#about" class="smoothscroll">Sobre</a></li>
+                        <li><a href="#services" class="smoothscroll">Serviços</a></li>
+                        <li><a href="#pricing" class="smoothscroll">Planos</a></li>                    
+                        <li><a href="#cadastro" class="smoothscroll">Cadastre-se</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Area Ends -->
+    <!-- Hero Area Starts -->
+    <div class="hero-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="hero-content">
+                        <div class="hero-content-inner">
+                            <h2 class="title" >Agora os lojistas da grande Manaí­ra têm um aplicativo pra chamar de seu</h2>
+                            <p class="caption-text">Faça parte do maior shopping da Paraíba</p>
+                            <a href="#about" class="btn btn-default btn-mbs-fill-sqr smoothscroll">SAIBA MAIS</a>
+                            <!-- <a href="#pricing" class="btn btn-default btn-mbs-fill-sqr smoothscroll">CONTRATE</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="hero-carousel-wrap">
+                        <div id="hero-carousel" class="owl-carousel owl-theme hero-carousel">
+                            <div class="item">
+                                <img src="img/slider/iphone_1.png" alt="Slider">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Area Ends -->
+    <!-- Our Motto Area Starts -->
+    <div class="our-motto-area area-padding" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center wow fadeInDown">
+                        <h2>Quem somos?</h2>    
+                        <p>Aprenda mais sobre nós</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            		<div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/about/vitrine.jpg" alt=""></div>
+                        <div class="icon-content">
+                            <h4 class="title">A maior vitrine digital da Paraíba</h4>
+                            <p>Um aplicativo pensado pra você que tem empresa na grande Manaíra..
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/about/vitrine.jpg" alt=""></div>
+                        <div class="icon-content">
+                            <h4 class="title">A vitrine digital mais relevante da Paraíba</h4>
+                            <p>Faça parte da maior comunidade de negócios e ganhe novos clientes.</p>
+                            <div class="icon-button">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/about/atrair.jpg" alt=""></div>
+                        <div class="icon-content">
+                            <h4 class="title">Atraia mais clientes para o seu negócio</h4>
+                            <p>Seja visto por milhares de pessoas interessadas em seu serviço no melhor aplicativo de busca da cidade.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Motto Area Ends -->
+    <!-- Free Trial -->
+    <div id="free-trial" class="free-trial area-padding">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-4">
+                    <div class="free-content">
+                        <h2>Por que nos escolher ?</h2>
+                        <ul>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <img src="img/about/publico-alvo.jpg" alt="">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <h3>Público alvo</h3>
+                                        <span>Seja visto por milhares de consumidores para gerar mais vendas para o seu negócio.</span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <img src="img/services/push.jpg" alt="">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <h3>Notificações por PUSH</h3>
+                                        <span>Deixe o seu cliente atualizado de tudo que acontece de bom na sua loja.</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <img src="img/about/trial-img.png" class="trial-img" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Free Trial end -->
+    <!-- Services Area Starts -->
+    <div class="services-area area-padding" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center wow fadeInDown">
+                        <h2>Conheça nossos serviços</h2>    
+                        <p>Conheça alguns de nossos serviços</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+    
+                <div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/services/cupons.jpg" alt=""></div>
+                       	<div class="icon-content">
+                       		<h4 class="title">Cupons de desconto</h4>
+                            <p><span class="title">Promova cupons de descontos dos mais diferentes tipos de serviço através da nossa área de Cupons de Desconto.</span></p>
+	        	         </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/about/search.svg" alt=""></div>
+                        <div class="icon-content">
+                            <h4 class="title">Indexação Constante</h4>
+                            <p>Atualizamos constantemente nossa database para que o consumidor sempre possa encontrar mais serviços por perto.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/services/time.jpg" alt=""></div>
+                        <div class="icon-content">
+                            <h4 class="title">Economize tempo</h4>
+                            <p>A pesquisa pelo serviço é feita de forma rápida e eficaz por meio de nosso sistema.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row hidden-xs">
+                <div class="col-xs-12">
+                    <div class="gap-30"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/services/campanha.jpg" alt=""></div>
+                        <div class="icon-content">
+                            <h4 class="title">Crie campanhas promocionais</h4>
+                            <p>Prepare promoções exclusivas usando cupons e aumente as vendas todos os dias.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/services/push.jpg" alt=""></div>
+                        <div class="icon-content">
+                            <h4 class="title">Notificações por PUSH</h4>
+                            <p>Deixe o seu cliente atualizado de tudo que acontece de bom na sua loja.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/services/star.svg" alt=""></div>
+                        <div class="icon-content">
+                            <h4 class="title">Crie promoções em tempo real</h4>
+                            <p>Você posta as promoções da sua loja direto da nossa página, 24h por dia, 7 dias por semana.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Keywrod Research Area Ends -->
+    <!-- Hire us Area Starts -->
+    <!-- 
+    <div class="hireus-area area-padding fundoDegrade" >
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="content-box">
+                        <h2 class="title">Contrate-nos</h2>
+                        <p>Aumente seu número de clientes ou crie fidelidade a sua marca de uma maneira inteligente, exitosa e moderna.
+                        </p>
+                        <p>Cadastra-se e agora!</p>
+                        <div class="gap-20"></div>
+                        <a href="#cadastro" class="btn btn-default btn-mbs-fill-sqr smoothscroll">Cadastre-se</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-offset-2 col-md-4">
+                    <div class="single-img-box">
+                        <img src="img/hiring.png" alt="Hire Us">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	-->
+    
+    <!-- Hire us Area Ends -->
+    <!-- Pricing Section -->
+    <!--
+    <div id="pricing">
+        <div class="container">
+            <div class="section-title text-center wow fadeInUp">
+                <h2>Planos</h2>    
+                <p>Encontre o plano certo para você</p>
+            </div>
+            <div class="price-table-3">
+                <div class="row">
+                    <div class="col-md-4 box" >
+                        <div class="price-table price-mbs-basico box_circ" align="center">
+                            <ul>
+                                <li>
+                                    <img src="img/price/M1estrelas.png" class="price-icon" alt="">
+                                    <br>
+                                    <h2>Básico</h2>
+                                </li>
+								<li>Edição online</li>
+							   	<li>Endereço e telefones</li>
+							   	<li>Descrição do negócio</li>
+							   	<li>Informações adicionais</li>
+							   	<li>Uma categoria selecionada</li>
+							   	<li>Galeria de imagens (1 fotos)</li>
+                                <li class="transparente">-</li>
+                                <li>
+                                    <h3>Grátis</h3>
+                                </li>
+                                <li>
+                                  	<a  href="#cadastro"class='btn btn-primary btn-mbs-fill-sqr smoothscroll'>Assine Agora</a>		
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 box">
+                        <div class="price-table price-mbs-avancado table-active box_circ" >
+                            <ul>
+                                <li>
+                                    <img src="img/price/M2estrelas.png" class="price-icon" alt="">
+                                    <br>
+                                    <h2>Avançado</h2>
+                                </li>
+                                <li>Edição online</li>
+							   	<li>Endereço e telefones</li>
+							   	<li>Descrição do negócio</li>
+							   	<li>Informações adicionais</li>
+							   	<li>5 categorias selecionadas</li>
+							   	<li>Galeria de imagens (5 fotos)</li>
+							   	<li>Galeria de vídeos (5 vídeos)</li>
+                                <li>5 Promoções cadastradas</li>
+                                <li>Cupons de Desconto</li>
+                                <li>5 Redes sociais</li>
+                                <li>10 marcas cadastradas</li>
+                                <li class="transparente">-</li>
+                                <li>
+                                    <h3>R$69,90 </h3>
+                                </li>
+                                <li >
+                                  	<a  href="#cadastro"class='btn btn-primary btn-mbs-fill-sqr smoothscroll'>Assine Agora</a>									
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 box">
+                        <div class="price-table price-mbs-premium box_circ" >
+                            <ul>
+                                <li>
+                                    <img src="img/price/M3estrelas.png" class="price-icon" alt="">
+                                    <br>
+                                    <h2>Premium</h2>
+                                </li>
+                                <li>Edição online</li>
+							   	<li>Endereço e telefones</li>
+							   	<li>Descrição do negócio</li>
+							   	<li>Informações adicionais</li>
+							   	<li>5 categorias selecionadas</li>
+							   	<li>Galeria de imagens (ilimitada)</li>
+							   	<li>Galeria de vídeos (ilimitada)</li>
+                                <li>Promoções ilimitadas</li>
+                                <li>Cupons de Desconto</li>
+                                <li>5 Redes sociais ilimitadas</li>
+                                <li>Marcas ilimitadas</li>
+                                <li>Notificação PUSH</li>
+                                <li>
+                                    <h3>R$99,90 </h3>
+                                </li>
+                                <li>
+                                	<a  href="#cadastro"class='btn btn-primary btn-mbs-fill-sqr smoothscroll'>Assine Agora</a>									
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     -->
+  
+  	<div class="newsletter contact-area area-padding fundoDegrade" id="cadastro" >
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                <!-- <h2><span>FACA SEU</span> CADASTRO</h2>  -->
+                <p>Dúvidas ? Cadastre-se, é rápido, simples e fácil.!</p>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-7">
+                    <div class="contact-form">
+                        <div class="cf-msg"></div>
+                        
+                        <form class="form-horizontal" method="POST" th:object="${credenciado}">
+
+                        	<div th:text="${mensagem}" th:if="${not #strings.isEmpty(mensagem)}"></div>
+							<div th:if="${#fields.hasAnyErrors()}">
+								<div th:each="detailedError : ${#fields.detailedErrors()}">
+									<span th:text="${detailedError.message}"></span>
+								</div>
+							</div> 
+								
+                            <div class="row">
+                            	
+                                <div class="col-xs-12">
+                                    <p>
+                                        <label>Razão social<span class="asteric">*</span></label>
+                                        <input type="text" class="form-control" id="nome" th:field="*{nome}" autofocus="autofocus" placeholder="ex.: Levi Eletrônica Ltda" required>
+                                    </p>
+                                </div>
+                                
+                                <div class="col-xs-12">
+                                    <p>
+                                        <label>Nome Fantasia<span class="asteric">*</span></label>
+                                        <input type="text" class="form-control" id="razaoSocial" th:field="*{razaoSocial}" autofocus="autofocus" placeholder="ex.: Levi Eletrônica" required>
+                                    </p>
+                                </div>
+                                
+                                <div class="col-xs-12">
+                                    <p>
+                                        <label>Nome Representante<span class="asteric">*</span></label>
+                                        <input type="text" class="form-control" id="nomeRepresentante" th:field="*{representante}" autofocus="autofocus" placeholder="ex.: Levi Silveira" required> 
+                                    </p>
+                                </div>
+                                
+                                <div class="col-xs-12 col-sm-6">
+                                    <p>
+ 									   <label for="cpf">CNPJ Empresa</label><span class="asteric">*</span>
+                                        <input type="text" class="form-control" id="cpfCnpj" th:field="*{cnpj}" maxlength="14" onkeypress='return SomenteNumero(event)' placeholder="ex.: 54049596000143" required>
+                                    </p>
+                                </div>
+                                
+                                 <div class="col-xs-12 col-sm-6">
+                                    <p>
+ 									   <label for="cpf">CPF Representante</label><span class="asteric">*</span>
+                                        <input type="text" class="form-control" id="cpfCnpj" th:field="*{cpfRepresentante}" maxlength="11" onkeypress='return SomenteNumero(event)' placeholder="ex.: 18897428053" required>
+                                    </p>
+                                </div>
+                                
+                                <div class="col-xs-12 col-sm-2">
+	                                <p>
+                                        <label>DDD <span class="asteric">*</span></label>
+                                        <input type="text" class="form-control" id="area" th:field="*{area}" pattern="[0-9]+$" maxlength="2" placeholder="ex.: 11" onkeypress='return SomenteNumero(event)' required>
+                                    </p>
+                                </div>
+                                
+                                <div class="col-xs-12 col-sm-4">
+	                               <p>
+                                        <label>Número <span class="asteric">*</span></label>
+                                        <input type="text" class="form-control" id="numero" th:field="*{numero}" pattern="[0-9]+$" maxlength="9" placeholder="ex.: 99878-8790" onkeypress='return SomenteNumero(event)' required>
+                                    </p>
+                                </div>
+                                
+                                
+                                <div class="col-xs-12 col-sm-6">
+                                    <p>
+                                        <label>Seu Email <span class="asteric">*</span></label>
+                                        <input type="email" class="form-control" id="email" name="email" th:field="*{email}" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="ex.:Levi.eletronica@gmail.com" required>
+                                    </p>
+                                </div>
+
+                                <div class="col-xs-12">
+                                    <p>
+                                        <button type="submit" class="btn btn-default btn-mbs-fill-sqr" id="submit">Cadastrar</button>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4 col-md-offset-1">
+                    <h4>MBS para negócios</h4>
+                    <p>Nós alcançamos seus clientes, você alcança seus objetivos.</p>
+                    <div class="gap-30"></div>
+                    <div class="contact-address">
+                        <div class="img-icon-left-box">
+                            <div class="img-icon">
+                                <img src="img/icon-call-us.png" alt="Icon">
+                            </div>
+                            <div class="icon-content">
+                                <h5 class="title">SAC</h5>
+                                <p>83988630307</p>
+                            </div>
+                        </div>
+                        <div class="img-icon-left-box">
+                            <div class="img-icon">
+                                <img src="img/icon-email.png" alt="Icon">
+                            </div>
+                            <div class="icon-content">
+                                <!-- <h5 class="title">Envie-nos um email agora</h5>  -->
+                                <p>manairabairroshoppingcontato@gmail.com </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+      <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+
+<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+      
+    <!-- Newsletter Area Ends -->
+    <!-- Footer Area Starts -->
+    
+    <div class="footer-area area-padding">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="footer-widget">
+                            <h4 class="title">Sobre o MBS</h4>
+                            <p>o Manaíra Bairro Shopping, é uma nova forma de conhecer e comprar produtos e serviços na região da grande Manaíra.
+                            Oferecemos agilidade, comodidade, segurança e promoções exclusivas. É aqui onde consumidores e empresarios se encontram. 
+                            perto de sua localização.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="footer-widget">
+                            <h4 class="title">Links úteis</h4>
+                            <ul>
+                                <li class="active"><a href="#home" class="smoothscroll">Home</a></li>
+                                <li><a href="#about" class="smoothscroll">Sobre</a></li>
+                                <li><a href="#services" class="smoothscroll">Serviços</a></li>
+                            </ul>
+                        </div>
+                    </div>
+					<div class="col-xs-12 col-sm-4">
+                        <div class="footer-widget">
+                            <h4 class="title">Baixe o APP</h4>
+                            <ul>
+                                <li><a href="#about" class="smoothscroll">Android</a></li>
+                                <li><a href="#services" class="smoothscroll">IOS</a></li>
+                            </ul>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            
+            <!-- 
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="footer-widget">
+                            <div class="img-icon-left-box">
+                                <div class="img-icon">
+                                    <img src="img/icon-call-us.png" alt="Icon">
+                                </div>
+                                <div class="icon-content">
+                                    <h5 class="title">Ligue para nós hoje</h5>
+                                    <p>+5583998034046</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="footer-widget">
+                            <div class="img-icon-left-box">
+                                <div class="img-icon">
+                                    <img src="img/icon-email.png" alt="Icon">
+                                </div>
+                                <div class="icon-content">
+                                    <h5 class="title">Envie-nos um email agora</h5>
+                                    <p>manairabairroshoppingcontato@gmail.com </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             -->
+        </div>
+    </div>
+    <!-- Footer Area Ends -->
+    <!-- Copyright Area Starts -->
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="left">
+                        <span> Copyright &copy; MBS 2019. Todos os direitos reservados. </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+     <!-- Copyright Area Ends -->
+    <!-- Scripts -->
+    <!--<script src="js/jquery-2.1.1.min.js"></script> -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+
+</html>

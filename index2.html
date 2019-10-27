@@ -1,0 +1,913 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>MBS - Mana�ra Bairro Sopping</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200,300,400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl.theme.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="img/mbs/favicon.png">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+    
+    <meta property="og:site_name" content="MBS - Manaira Bairro Shopping">
+	<meta property="og:title" content="Manaira Bairro Shopping" />
+	<meta property="og:description" content="O Mana�ra Bairro Shopping(MBS), � uma nova forma de conhecer e comprar produtos e servi�os na regi�o de Mana�ra; bairro com mais de 3 mil empresas instaladas. O MBS oferece agilidade, comodidade, seguran�a e promo��es exclusivas. � aqui onde consumidores e empres�rios se encontram" />
+	<meta property="og:image" itemprop="image" content="http://www.manairabairroshopping.com/img/logo.png">
+	<meta property="og:type" content="website" />
+    
+    <script type="text/javascript">
+	    window.onload=function(){
+			$("#cpfCnpj").keydown(function(){
+			    try {
+			    	$("#cpfCnpj").unmask();
+			    } catch (e) {}
+			    
+			    var tamanho = $("#cpfCnpj").val().length;
+				
+			    if(tamanho < 11){
+			        $("#cpfCnpj").mask("999.999.999-99");
+			    } else if(tamanho >= 11){
+			        $("#cpfCnpj").mask("99.999.999/9999-99");
+			    }
+			    
+			    // ajustando foco
+			    var elem = this;
+			    setTimeout(function(){
+			    	// mudo a posi��o do seletor
+			    	elem.selectionStart = elem.selectionEnd = 10000;
+			    }, 0);
+			    // reaplico o valor para mudar o foco
+			    var currentValue = $(this).val();
+			    $(this).val('');
+			    $(this).val(currentValue);
+			});
+			
+			$('#telefone')  
+		    .mask("(99) 99999-9999")  
+		        .live('focusout', function (event) {  
+		            var target, phone, element;  
+		            target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
+		            phone = target.value.replace(/\D/g, '');  
+		            element = $(target);  
+		            element.unmask();  
+		            if(phone.length < 10) {  
+		                element.mask("(99) 9999-9999");  
+		            } else {  
+		                element.mask("(99) 99999-9999");  
+		            }  
+		        });
+	    }
+	</script>
+    
+    
+</head>
+
+<style>
+	.animated-nav {
+	    /* background: #e9453d !important; */
+	    background-image: url(../img/fundoDegrade.png) !important;
+		-webkit-background-size: cover !important;
+		background-size: cover !important;
+	}
+	.clients {
+	    background: #e9453d;
+	}
+	.hireus-area {
+	    background: #e9453d;
+	}
+	.newsletter {
+	    background: #e9453d;
+	}
+	
+	.hero-area {
+	    width: 100%;
+	    height: 100vh;
+	    position: relative;
+	    z-index: 0;
+	    background: #e9453d;
+	    overflow: hidden;
+	    background-image: url(img/r.png);
+	    -webkit-background-size: cover;
+	    background-size: cover;
+	}
+	
+	@media(max-width:500px){    
+		.hero-area {
+		    width: 100%;
+		    height: 100vh;
+		    position: relative;
+		    z-index: 0;
+		    background: #e9453d;
+		    overflow: hidden;
+		    background-image: url(img/homeCell.png);
+		    -webkit-background-size: cover;
+		    background-size: cover;
+		}
+	
+	}
+	
+	.fundoDegrade{
+		background-image: url(img/fundoDegrade.png);
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+	
+</style>
+
+<body data-spy="scroll" data-target="#scroll-menu" data-offset="120">
+
+    <!-- Preloader Starts -->
+    <div class="preloader-area">
+        <div class="preloader-inner">
+            <div class="preloader">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Ends -->
+    <!-- Header Area Starts -->
+    <header id="home" class="header-area" >
+        <nav id="navigation" class="navbar navbar-default navbar-fixed-top" id="scroll-menu">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="img/logo.png" alt="Alioo" height="164" width="180"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#home" class="smoothscroll">Home</a></li>
+                        <li><a href="#about" class="smoothscroll">Sobre</a></li>
+                        <li><a href="#services" class="smoothscroll">Servi�os</a></li>
+                        <!--
+                        <li><a href="#clients" class="smoothscroll">Clientes</a></li>
+                        <li><a href="#pricing" class="smoothscroll">Planos</a></li>                    
+                        <li><a href="#cadastro" class="smoothscroll">Cadastre-se</a></li>
+                         -->                    
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Area Ends -->
+    <!-- Hero Area Starts -->
+    <div class="hero-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="hero-content">
+                        <div class="hero-content-inner">
+                            <h2 class="title" >Agora os lojistas da grande Mana�ra t�m um aplicativo pra chamar de seu</h2>
+                            <p class="caption-text">Fa�a parte do maior shopping da Para�ba</p>
+                            <a href="#about" class="btn btn-default btn-default-fill-sqr smoothscroll">SAIBA MAIS</a>
+                            <a href="#pricing" class="btn btn-default btn-mbs-fill-sqr smoothscroll">CONTRATE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="hero-carousel-wrap">
+                        <div id="hero-carousel" class="owl-carousel owl-theme hero-carousel">
+                            <div class="item">
+                                <img src="img/slider/iphone_1.png" alt="Slider">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Area Ends -->
+    <!-- Our Motto Area Starts -->
+    <div class="our-motto-area area-padding" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center wow fadeInDown">
+                        <h2>Quem somos?</h2>    
+                        <p>Aprenda mais sobre n�s</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            		<div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/about/analytics.svg" alt=""></div>
+                        <div class="icon-content">
+                            <h4 class="title">Marketing Cross Channel</h4>
+                            <p>Trabalhar com esse tipo de comunica��o nada mais é que planejar suas 
+                            campanhas, pensando em todas as formas de canais disponíveis, seja ele via
+                            website, redes sociais, e-mail, displays ou qualquer outro formato de m�dia digital.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/about/keyword.svg" alt=""></div>
+                        <div class="icon-content">
+                            <h4 class="title">Plataforma de autogest�o</h4>
+                            <p>Envie suas campanhas de marketing importando seus contatos. 
+                            	  Resultados medidos por estatísticas: entregues, lidas e não lidas.
+                            </p>
+                            <div class="icon-button">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/about/share.svg" alt=""></div>
+                        <div class="icon-content">
+                            <h4 class="title">Obtenha resposta</h4>
+                            <p>Com nossa ferramenta as campanhas interagem com seus clientes. Cada mensagem que for respondida s�o encaminhada at� voc�..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Motto Area Ends -->
+    <!-- Free Trial -->
+    <div id="free-trial" class="free-trial area-padding">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-4">
+                    <div class="free-content">
+                        <h2>Por que nos escolher ?</h2>
+                        <ul>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <img src="img/about/search.svg" alt="">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <h3>Baixo custo</h3>
+                                        <span>Melhor custo/benefício do mercado.</span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <img src="img/about/analytics.svg" alt="">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <h3>Dashboard</h3>
+                                        <span>Graficos estatísticos em tempo real de suas campanhas.</span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <img src="img/about/puzzle.svg" alt="">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <h3>Intera��o</h3>
+                                        <span>Cada mensagem respondida pelo cliente � encaminhada at� voc�.</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <img src="img/about/trial-img.png" class="trial-img" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Free Trial end -->
+    <!-- Services Area Starts -->
+    <div class="services-area area-padding" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center wow fadeInDown">
+                        <h2>Services</h2>    
+                        <p>Curabitur arcu erat, accumsan id imperdiet</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/services/video-camera.svg" alt=""></div>
+                        <div class="icon-content">
+                            <h4 class="title">Website Optimization</h4>
+                            <p>This is the demo content for the website. You can add your website content here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/services/photo-album.svg" alt=""></div>
+                        <div class="icon-content">
+                            <h4 class="title">Online Marketing</h4>
+                            <p>This is the demo content for the website. You can add your website content here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/services/video-player.svg" alt=""></div>
+                        <div class="icon-content">
+                            <h4 class="title">Pay Per Click</h4>
+                            <p>This is the demo content for the website. You can add your website content here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row hidden-xs">
+                <div class="col-xs-12">
+                    <div class="gap-30"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/services/jigsaws.svg" alt=""></div>
+                        <div class="icon-content">
+                            <h4 class="title">Content Strategy</h4>
+                            <p>This is the demo content for the website. You can add your website content here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/services/insight.svg" alt=""></div>
+                        <div class="icon-content">
+                            <h4 class="title">Email Marketing</h4>
+                            <p>This is the demo content for the website. You can add your website content here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="icon-box">
+                        <div class="icon-left"><img src="img/services/star.svg" alt=""></div>
+                        <div class="icon-content">
+                            <h4 class="title">Sales Promotion</h4>
+                            <p>This is the demo content for the website. You can add your website content here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services Area Ends -->
+    <!-- Clients Area Starts -->
+    <div id="clients" class="counter-area clients fundoDegrade" data-stellar-background-ratio="0.5" > 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center wow fadeInDown">
+                        <h2>Nossos Clientes</h2>    
+                        <p>Curabitur arcu erat, accumsan id imperdiet</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="counter-box">
+                                <div class="counter-icon"><img src="img/counter/package.svg" alt=""></div>
+                                <div class="counter-content">
+                                    <span class="digit">100</span><span class="symbol">+</span>
+                                    <br>
+                                    <span class="title">Projects Done</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="counter-box">
+                                <div class="counter-icon"><img src="img/counter/question.svg" alt=""></div>
+                                <div class="counter-content">
+                                    <span class="digit">50</span><span class="symbol">+</span>
+                                    <br>
+                                    <span class="title">Happy Clients</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="counter-box">
+                                <div class="counter-icon"><img src="img/counter/growth.svg" alt=""></div>
+                                <div class="counter-content">
+                                    <span class="digit">20</span><span class="symbol">+</span>
+                                    <br>
+                                    <span class="title">Awards Win</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="counter-box">
+                                <div class="counter-icon"><img src="img/counter/startup.svg" alt=""></span></div>
+                                <div class="counter-content">
+                                    <span class="digit">1000</span><span class="symbol">+</span>
+                                    <br>
+                                    <span class="title">Cup Of Coffee</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                                <!-- Carousel Slides / Quotes -->
+                                <div class="carousel-inner text-center">
+                                    <!-- Quote 1 -->
+                                    <div class="item active">
+                                        <blockquote>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt sed do eiusmod tempor incididunt ut  !</p>
+                                                    <small>Someone famous</small>
+                                                </div>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <!-- Quote 2 -->
+                                    <div class="item">
+                                        <blockquote>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed sed do eiusmod tempor incididunt do eiusmod tempor incididunt . </p>
+                                                    <small>Someone famous</small>
+                                                </div>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <!-- Quote 3 -->
+                                    <div class="item">
+                                        <blockquote>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed sed do eiusmod tempor incididunt do eiusmod tempor incididunt . .</p>
+                                                    <small>Someone famous</small>
+                                                </div>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <!-- Bottom Carousel Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="img/counter/avatar1.png" alt="">
+                                    </li>
+                                    <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="img/counter/avatar2.png" alt="">
+                                    </li>
+                                    <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="img/counter/avatar3.png" alt="">
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Clients Area Ends -->
+    <!-- Keywrod Research Area Starts -->
+    <div class="keyword-research-area area-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center wow fadeInDown">
+                        <h2>Perguntas Frequentes</h2>    
+                        <p>Talvez os t�picos abaixo possam lhe ajudar a encontrar o que voc� procura.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="single-img-box">
+                        <img src="img/perguntas.png" alt="Keyword Research">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="theme-collapse">
+                    		<div class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" href="#collapse2">
+                                        <i class="fa fa-plus"></i>
+                                        Como posso adquirir um pacote de mensagens?</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>Só precisa criar uma conta gratuita ou selecionar um plano <a href="#pricing" class="smoothscroll">aqui</a>, acessar sua conta, e escolher um
+                                           pacote espec�fico e pagar o valor respectivo. Pronto!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" href="#collapse1">
+                                        <i class="fa fa-plus"></i>
+                                        Pacotes acima de 100.000 envios. O MBS consegue me atender?</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>Entre em contato conosco. Possuímos condi��es especiais para volumes acima de 100.000.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" href="#collapse3">
+                                        <i class="fa fa-plus"></i>
+                                        Possui algum tipo de integração?</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>Se voc� � um desenvolvedor de software ou profissional da �rea, oferecemos tamb�m uma 
+                                        API para envio de mensagens de SMS e Whatsapp, 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" href="#collapse5">
+                                        <i class="fa fa-plus"></i>
+                                        Quais s�o os m�todos de pagamento dispon�veis?</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse5" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>Voc� pode pagar por cart�o de cr�dito, Paypal e PagSeguro. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" href="#collapse7">
+                                        <i class="fa fa-plus"></i>
+                                        Os pacotes de mensagens t�m prazo de validade?</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse7" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>N�o, os pacotes de mensagens adquiridos tem prazo de validade indeterminado.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Keywrod Research Area Ends -->
+    <!-- Hire us Area Starts -->
+    <div class="hireus-area area-padding fundoDegrade" >
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="content-box">
+                        <h2 class="title">Contrate-nos</h2>
+                        <p>Aumente seu n�mero de clientes ou crie fidelidade a sua marca de uma maneira inteligente, exitosa e moderna.
+                        </p>
+                        <p>Cadastra-se e comece a enviar mensagens em massa via WhatsApp!</p>
+                        <div class="gap-20"></div>
+                        <a href="#cadastro" class="btn btn-default btn-mbs-fill-sqr smoothscroll">Cadastre-se</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-offset-2 col-md-4">
+                    <div class="single-img-box">
+                        <img src="img/hiring.png" alt="Hire Us">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hire us Area Ends -->
+    <!-- Pricing Section -->
+    <div id="pricing">
+        <div class="container">
+            <div class="section-title text-center wow fadeInUp">
+                <h2>Planos</h2>    
+                <p>Encontre o plano certo para voc�</p>
+            </div>
+            <div class="price-table-3">
+                <div class="row">
+                    <div class="col-md-4 box" >
+                        <div class="price-table price-mbs-basico box_circ" align="center">
+                            <ul>
+                                <li>
+                                    <img src="img/price/M1estrelas.png" class="price-icon" alt="">
+                                    <br>
+                                    <h2>B�sico</h2>
+                                </li>
+                                <li>3 Imagens</li>
+                                <li>1 Categoria</li>
+                                <li>1 Promo��es</li>
+                                <li>1 Rede social</li>
+                                <li class="transparente">-</li>
+                                <li>
+                                    <h3>$49,90</h3>
+                                </li>
+                                <li>
+                                  	<a href="http://mpago.la/2RTAbo" class="box_pay">
+										<img src="img/botaoPagamento/Mercadopago.png" width="120" height="120">
+									</a>		
+									<a class="box_pay transparente"  ></a>
+									<a href="http://pag.ae/7UN_6xFHG" class="box_pay">
+										<img src="img/botaoPagamento/PagSeguro.png" width="120" height="120">
+									</a>
+									<a class="box_pay transparente"  ></a>							
+									<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RF7WYVZSTYMDW" class="box_pay">
+										<img src="img/botaoPagamento/PayPal.svg.png" width="120" height="120">
+									</a>									
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 box">
+                        <div class="price-table price-mbs-avancado table-active box_circ" >
+                            <ul>
+                                <li>
+                                    <img src="img/price/M2estrelas.png" class="price-icon" alt="">
+                                    <br>
+                                    <h2>Avan�ado</h2>
+                                </li>
+                                <li>5 Imagens</li>
+                                <li>2 Categorias</li>
+                                <li>2 Promo��es</li>
+                                <li>2 Rede social</li>
+                                <li class="transparente">-</li>
+                                <li>
+                                    <h3>R$69,90 </h3>
+                                </li>
+                                <li >
+                                  	<a  href="#cadastro"class='btn btn-primary btn-mbs-fill-sqr smoothscroll'>Assine Agora</a>									
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 box">
+                        <div class="price-table price-mbs-premium box_circ" >
+                            <ul>
+                                <li>
+                                    <img src="img/price/M3estrelas.png" class="price-icon" alt="">
+                                    <br>
+                                    <h2>Premium</h2>
+                                </li>
+                                <li>10 Imagens</li>
+                                <li>1 V�deo</li>
+                                <li>5 Categorias</li>
+                                <li>10 Promo��es</li>
+                                <li>2 Rede social</li>
+                                <li>
+                                    <h3>R$99,90 </h3>
+                                </li>
+                                <li>
+                                	<a  href="#cadastro"class='btn btn-primary btn-mbs-fill-sqr smoothscroll'>Assine Agora</a>									
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+	<div class="newsletter contact-area area-padding fundoDegrade" id="cadastro" >
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                <h2><span>FACA SEU</span> CADASTRO</h2>
+                <p>D�vidas ? Cadastre-se e tenha acesso agora. � r�pido, simples e f�cil.!</p>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-7">
+                    <div class="contact-form">
+                        <div class="cf-msg"></div>
+                        
+                        <form class="form-horizontal" method="POST" >
+ 
+                        
+                            <div class="row">
+                            	
+                                <div class="col-xs-12">
+                                    <p>
+                                        <label>Nome <span class="asteric">*</span></label>
+                                        <input type="text" class="form-control" id="nome" autofocus="autofocus" placeholder="ex.: Maria Rita" required>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <p>
+ 									   <label for="cpf">CNPJ/CPF</label><span class="asteric">*</span>
+                                        <input type="text" class="form-control" id="cpfCnpj" name="cpfCnpj" placeholder="ex.: 87.792.562/0001-01">
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <p>
+                                        <label>Telefone <span class="asteric">*</span></label>
+                                        <input class="form-control" id="telefone" name="telefone" placeholder="ex.: (11) 99878-8790" required>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p>
+                                        <label>Seu Email <span class="asteric">*</span></label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="ex.: maria.rita@gmail.com" required>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12">
+                                    <p>
+                                        <div class="g-recaptcha" data-sitekey="6LfDlloUAAAAAAyT74jtZScPAuX29XIlKKK3m7pi"></div>
+                                    </p>
+                                </div>
+
+                                <div class="col-xs-12">
+                                    <p>
+                                        <button type="submit" class="btn btn-default btn-mbs-fill-sqr" id="submit">Cadastrar</button>
+                                    </p>
+                                </div>
+                            </div>
+                        </form:form>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4 col-md-offset-1">
+                    <h4>WhatsApp Marketing para neg�cios</h4>
+                    <p>N�s alcan�amos seus clientes, voc� alcan�a seus objetivos.</p>
+                    <div class="gap-30"></div>
+                    <div class="contact-address">
+                        <div class="img-icon-left-box">
+                            <div class="img-icon">
+                                <img src="img/icon-call-us.png" alt="Icon">
+                            </div>
+                            <div class="icon-content">
+                                <h5 class="title">Contate-nos</h5>
+                                <p>+5583998034046</p>
+                            </div>
+                        </div>
+                        <div class="img-icon-left-box">
+                            <div class="img-icon">
+                                <img src="img/icon-email.png" alt="Icon">
+                            </div>
+                            <div class="icon-content">
+                                <h5 class="title">Envie-nos um email agora</h5>
+                                <p>contato@MBSlab.io </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+      
+      <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+
+<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+      
+    <!-- Newsletter Area Ends -->
+    <!-- Footer Area Starts -->
+    
+    <div class="footer-area area-padding">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="footer-widget">
+                            <h4 class="title">Sobre o MBS</h4>
+                            <p>O MBS � uma plataforma de comunica��o cross channel especializada no envio de campanhas de 
+                            	   marketing e publicidade para os usu�rios do aplicativo de maior sucesso no mundo, o WhatsApp. 
+                            	   Enviamos sua campanha de marketing ou publicidade para qualquer quantidade de usu�rios no mundo.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="footer-widget">
+                            <h4 class="title">Links �teis</h4>
+                            <ul>
+                                <li class="active"><a href="#home" class="smoothscroll">Home</a></li>
+                                <li><a href="#about" class="smoothscroll">Sobre</a></li>
+                                <li><a href="#services" class="smoothscroll">Servi�os</a></li>
+                            </ul>
+                        </div>
+                    </div>
+					<div class="col-xs-12 col-sm-4">
+                        <div class="footer-widget">
+                            <h4 class="title">Baixe o APP</h4>
+                            <ul>
+                                <li><a href="#about" class="smoothscroll">Android</a></li>
+                                <li><a href="#services" class="smoothscroll">IOS</a></li>
+                            </ul>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="footer-widget">
+                            <div class="img-icon-left-box">
+                                <div class="img-icon">
+                                    <img src="img/icon-call-us.png" alt="Icon">
+                                </div>
+                                <div class="icon-content">
+                                    <h5 class="title">Ligue para n�s hoje</h5>
+                                    <p>+5583998034046</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="footer-widget">
+                            <div class="img-icon-left-box">
+                                <div class="img-icon">
+                                    <img src="img/icon-email.png" alt="Icon">
+                                </div>
+                                <div class="icon-content">
+                                    <h5 class="title">Envie-nos um email agora</h5>
+                                    <p>contato@MBSlab.io </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Area Ends -->
+    <!-- Copyright Area Starts -->
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="left">
+                        <span> Copyright &copy; MBS 2018. Todos os direitos reservados. </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+     <!-- Copyright Area Ends -->
+    <!-- Scripts -->
+    <!--<script src="js/jquery-2.1.1.min.js"></script> -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+
+</html>
