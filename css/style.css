@@ -1129,6 +1129,7 @@ p a:visited {
   background-position: center bottom;
   padding: 0px 0px 130px;
     position: relative;
+    color: #fff;
 }
 
 .free-trial:after {
@@ -1137,29 +1138,40 @@ p a:visited {
     left: -1px;
     display: inline-block;
     width: 100%;
+    min-width: 100%;
     height: 735px;
+    min-height: 735px;
     z-index: -1;
     background-color: #673ab7;
     position: absolute;
-    clip-path: circle(54% at 25% 110%);
+    clip-path: circle(670px at 30% 756px);
+}
+
+.free-trial h2,
+.free-trial h3 {
+    color: #fff;
 }
 
 .free-trial .trial-img{
   width: 100%;
+    position: absolute;
+    top: 65px;
+    left: 85px;
 }
 .free-trial h2{
   font-size: 28px;
   line-height: 32px;
-  font-weight: 400;
-  margin: 0px 0px 30px;
+  font-weight: 700;
+  margin: 0 0 30px;
   letter-spacing: .8px;
+    padding-bottom: 15px;
 }
 .free-trial ul{
   padding-left: 0px;
 }
 .free-trial ul li{
   list-style: none;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
 }
 .free-trial ul li .col-md-2,
 .free-trial ul li .col-md-10{
