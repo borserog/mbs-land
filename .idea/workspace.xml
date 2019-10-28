@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="326a4922-b808-4b24-b522-c3a4eccd214d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/slider/iphone8mbs.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/team/shopping2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/team/shoppingHero.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/undraw/undraw_emails_6uqr.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/undraw/undraw_mail_2_tqip.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/undraw/undraw_message_sent_1030.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/undraw/undraw_personal_text.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/responsive.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +23,8 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/img/undraw" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -73,6 +64,7 @@
       <updated>1572194827559</updated>
       <workItem from="1572194829020" duration="9540000" />
       <workItem from="1572219501621" duration="7775000" />
+      <workItem from="1572260892884" duration="3363000" />
     </task>
     <servers />
   </component>
