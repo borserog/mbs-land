@@ -137,6 +137,7 @@ sub {
 }
 img {
     border: 0;
+    max-height: 470px;
 }
 svg:not(:root) {
     overflow: hidden;
@@ -251,7 +252,7 @@ h4,
 h5,
 h6 {
     margin: 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     color: #1d1d1d;
     letter-spacing: 0px;
@@ -394,6 +395,7 @@ body {
     -webkit-font-smoothing: antialiased;
     /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
+    background-color: #663ab617;
 }
 img {
     max-width: 100%;
@@ -624,6 +626,7 @@ p a:visited {
   margin-bottom: 25px;
   padding-bottom: 27px;
   text-transform: uppercase;
+    letter-spacing: 5px;
 }
 .section-title h2:before {
   border-bottom: 1px solid #1f2021;
@@ -820,6 +823,11 @@ p a:visited {
 .section-title p {
     margin-bottom: 0px;
 }
+
+.container-card {
+    padding: 50px;
+    transform: translateY(-125px);
+}
 /***********************/
 /*** 12. Preloader    ***/
 /***********************/
@@ -903,7 +911,7 @@ p a:visited {
     border: 0px;
 }
 .animated-nav{
-    background: #e9453d !important;
+    background: #673ab7 !important;
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
     transition: all .6s ease;
 }
@@ -917,12 +925,14 @@ p a:visited {
     text-transform: uppercase;
     padding: 20px 20px;
     outline: 0;
+    border-bottom: 3px solid transparent;
 }
 .header-area .navbar-default .nav li a:hover,
 .header-area .navbar-default .nav li a:active {
     color: #fff;
     opacity: 0.6;
     outline: 0;
+    border-bottom: 3px solid #fd6e3e;
 }
 .header-area .navbar-default .navbar-nav>.active>a, 
 .header-area .navbar-default .navbar-nav>.active>a:focus, 
@@ -937,10 +947,28 @@ p a:visited {
 }
 .navbar-brand {
     padding: 10px 15px;
+    background: url(../img/mbs/logoFull.svg) no-repeat;
+    background-size: cover;
+    width: 131px;
+    height: 45px;
+    margin-top: 9px;
 }
+
+@media (max-width: 1024px) {
+    .navbar-brand {
+        background: url(../img/mbs/logo-132x130.svg) no-repeat;
+        background-size: cover;
+        width: 60px;
+        margin-top: 8px;
+        margin-left: 15px;
+        height: 50px;
+    }
+}
+
 .navbar-brand img {
     max-width: 100%;
 }
+
 .caret {
     color: #fff;
 }
@@ -978,24 +1006,24 @@ p a:visited {
 /***********************/
 .hero-area {
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     position: relative;
     z-index: 0;
-    background: #3083a7; 
     overflow: hidden;
-    background-image: url(../img/r.png);
+    background: #3083a7 url(../img/team/shopping2.png);
     -webkit-background-size: cover;
     background-size: cover;
-
+    clip-path: ellipse(1350px 62% at 50% 37%);
 }
 
 
 .hero-content {
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     position: relative;
     z-index: 0;
     display: table;
+    padding: 0 27px;
 }
 .hero-content .hero-content-inner {
     width: 100%;
@@ -1004,7 +1032,7 @@ p a:visited {
     vertical-align: middle;
 }
 .hero-content .title {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 48px;
     font-weight: 500;
     color: #fff;
@@ -1022,7 +1050,7 @@ p a:visited {
 }
 /* Home Version 2 */
 .hero-carousel-wrap {
-    height: 100vh;
+    height: 85vh;
     -webkit-display: flex;
     display: flex;
     -webkit-align-items: center;
@@ -1144,9 +1172,14 @@ p a:visited {
 }
 
 .services-area {}
-.icon-box {}
+.icon-box {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
 .icon-box .icon-left {
-    position: absolute;
     width: 80px;
     height: auto;
     margin-right: 30px;
@@ -1156,6 +1189,20 @@ p a:visited {
     text-align: center;
     transition: all 0.8s ease-in-out;
 }
+
+.icon-box__icon {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 40px;
+}
+
+.icon-box__icon img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .icon-box .icon-left span {
     font-size: 50px;
     color: #1d1d1d;
@@ -1167,7 +1214,6 @@ p a:visited {
     transition: all 0.3s ease-in-out;
 }
 .icon-box .icon-content {
-    padding-left: 100px;
     padding-bottom: 60px;
 }
 .icon-box .icon-content .title {
@@ -1822,7 +1868,6 @@ a.btn {
     line-height: 55px;
     padding: 0px 30px;
     margin-right: 20px;
-    font-family: 'Raleway', sans-serif;
     font-size: 16px;
     font-weight: 500;
     border: 0px;
@@ -2200,14 +2245,21 @@ a.btn-mbs-fill-radius {
 }
 .btn-mbs-fill-round,
 a.btn-mbs-fill-round {
-    background: #0060ff;
+    background: #fd6e3e;
     color: #fff;
     -webkit-border-radius: 35px;
     -moz-border-radius: 35px;
     -ms-border-radius: 35px;
     -o-border-radius: 35px;
     border-radius: 35px;
+    padding: 0 50px;
 }
+
+#hero-button:hover {
+    background-color: #F0460C !important;
+    color: white !important;
+}
+
 .btn-mbs-fill-sqr,
 a.btn-mbs-fill-sqr {
     background: #0060ff;
@@ -2266,6 +2318,7 @@ a.btn-default-line-round:focus,
 a.btn-default-line-round:active,
 a.btn-default-line-round:visited {
     color: #1d1d1d;
+    border-radius: 35px;
 }
 
 /***************************/
@@ -2689,10 +2742,11 @@ a.btn-default-line-round:visited {
     position: relative;
     width: 100%;
     margin-bottom: 30px;
-    border-radius: 2px;
+    border-radius: 10px;
     color: rgba(0, 0, 0, 0.87);
     background: #fff;
     box-shadow:0 16px 26px -10px rgb(41, 170, 226);
+    padding: 60px 60px;;
 }
 .card-profile, .card-testimonial {
     padding: 15px;
