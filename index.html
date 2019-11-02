@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:200,300,400,500,700' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700&display=swap" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -32,7 +32,11 @@
 	<meta property="og:type" content="website" />
     
     <script type="text/javascript">
+
 	    window.onload=function(){
+            $(document).ready(function(){
+                $(this).scrollTop(0);
+            });
 			$("#cpfCnpj").keydown(function(){
 			    try {
 			    	$("#cpfCnpj").unmask();
@@ -80,6 +84,7 @@
 
 <body data-spy="scroll" data-target="#scroll-menu" data-offset="120">
 
+<div style="overflow-x: hidden; position: relative">
     <!-- Preloader Starts -->
     <div class="preloader-area">
         <div class="preloader-inner">
@@ -92,12 +97,13 @@
     </div>
     <!-- Preloader Ends -->
     <!-- Header Area Starts -->
-    <header id="home" class="header-area" >
+    <header id="home" class="header-area">
         <nav id="navigation" class="navbar navbar-default navbar-fixed-top" id="scroll-menu">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-                        aria-controls="navbar">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false"
+                            aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -115,7 +121,7 @@
                         <li><a href="#clients" class="smoothscroll">Clientes</a></li>
                         <li><a href="#pricing" class="smoothscroll">Planos</a></li>                    
                         <li><a href="#cadastro" class="smoothscroll">Cadastre-se</a></li>
-                         -->                    
+                         -->
                     </ul>
                 </div>
             </div>
@@ -129,21 +135,18 @@
                 <div class="col-xs-12 col-md-6">
                     <div class="hero-content">
                         <div class="hero-content-inner">
-                            <h2 class="title" >Agora os lojistas da grande Manaíra têm um aplicativo para chamar de
+                            <h2 class="title">Agora os lojistas da grande Manaíra têm um aplicativo para chamar de
                                 seu</h2>
                             <p class="caption-text">Faça parte do maior shopping da Paraíba</p>
-                            <a href="#about" class="btn btn-default btn-default-fill-round smoothscroll">SAIBA MAIS</a>
                             <a href="#pricing" id="hero-button" class="btn btn-default btn-mbs-fill-round smoothscroll
                             ">CONTRATE</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-6">
-                    <div class="hero-carousel-wrap">
-                        <div id="hero-carousel" class="owl-carousel owl-theme hero-carousel">
-                            <div class="item">
-                                <img src="img/slider/iphone8mbs.svg" alt="Slider">
-                            </div>
+                    <div class="hero-content">
+                        <div class="hero-content-inner hero-img">
+                            <img src="img/slider/iphone8mbs.svg" alt="Slider">
                         </div>
                     </div>
                 </div>
@@ -153,45 +156,44 @@
     <!-- Hero Area Ends -->
 
 
-
     <!-- Our Motto Area Starts -->
     <div class="our-motto-area area-padding" id="about">
-        <div class="card container container-card">
+        <div class="container card container-card">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title text-center wow fadeInDown">
-                        <h2>Quem somos?</h2>    
+                        <h2>Quem somos?</h2>
                         <p>Aprenda mais sobre nós</p>
                     </div>
                 </div>
             </div>
             <div class="row section-row">
-            		<div class="col-xs-12 col-sm-4">
+                <div class="col-lg-4">
                     <div class="icon-box">
                         <div class="icon-box__icon"><img src="img/undraw/undraw_emails_6uqr.svg" alt=""></div>
                         <div class="icon-content">
                             <h4 class="title">Marketing Cross Channel</h4>
                             <p>Trabalhar com esse tipo de comunicação nada mais é que planejar suas
-                            campanhas, pensando em todas as formas de canais disponíveis, seja ele via
-                            website, redes sociais, e-mail, displays ou qualquer outro formato de mídia digital.
+                                campanhas, pensando em todas as formas de canais disponíveis, seja ele via
+                                website, redes sociais, e-mail, displays ou qualquer outro formato de mídia digital.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4">
+                <div class="col-lg-4">
                     <div class="icon-box">
                         <div class="icon-box__icon"><img src="img/undraw/undraw_mail_2_tqip.svg" alt=""></div>
                         <div class="icon-content">
                             <h4 class="title">Plataforma de autogestão</h4>
-                            <p>Envie suas campanhas de marketing importando seus contatos. 
-                            	  Resultados medidos por estatísticas: entregues, lidas e não lidas.
+                            <p>Envie suas campanhas de marketing importando seus contatos.
+                                Resultados medidos por estatísticas: entregues, lidas e não lidas.
                             </p>
                             <div class="icon-button">
-                        </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4">
+                <div class="col-lg-4">
                     <div class="icon-box">
                         <div class="icon-box__icon"><img src="img/undraw/undraw_message_sent_1030.svg" alt=""></div>
                         <div class="icon-content">
@@ -205,12 +207,14 @@
         </div>
     </div>
     <!-- Our Motto Area Ends -->
+
+
     <!-- Free Trial -->
     <div id="free-trial" class="free-trial area-padding">
         <div class="container">
             <div class="row">
-                
-                <div class="col-md-4">
+
+                <div class="col-md-4 free-trial__text">
                     <div class="free-content">
                         <h2>Por que nos escolher ?</h2>
                         <ul>
@@ -244,8 +248,8 @@
                                         <img src="img/about/puzzle.svg" alt="">
                                     </div>
                                     <div class="col-md-10">
-                                        <h3>Intera��o</h3>
-                                        <span>Cada mensagem respondida pelo cliente � encaminhada at� voc�.</span>
+                                        <h3>Interação</h3>
+                                        <span>Cada mensagem respondida pelo cliente é encaminhada até você.</span>
                                     </div>
                                 </div>
                             </li>
@@ -267,7 +271,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title text-center wow fadeInDown">
-                        <h2>Services</h2>    
+                        <h2>Services</h2>
                         <p>Curabitur arcu erat, accumsan id imperdiet</p>
                     </div>
                 </div>
@@ -339,12 +343,12 @@
     </div>
     <!-- Services Area Ends -->
     <!-- Clients Area Starts -->
-    <div id="clients" class="counter-area clients fundoDegrade" data-stellar-background-ratio="0.5" > 
+    <div id="clients" class="counter-area clients fundoDegrade" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title text-center wow fadeInDown">
-                        <h2>Nossos Clientes</h2>    
+                        <h2>Nossos Clientes</h2>
                         <p>Curabitur arcu erat, accumsan id imperdiet</p>
                     </div>
                 </div>
@@ -407,7 +411,9 @@
                                         <blockquote>
                                             <div class="row">
                                                 <div class="col-sm-12">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt sed do eiusmod tempor incididunt ut  !</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                        eiusmod tempor incididunt sed do eiusmod tempor incididunt ut
+                                                        !</p>
                                                     <small>Someone famous</small>
                                                 </div>
                                             </div>
@@ -418,7 +424,8 @@
                                         <blockquote>
                                             <div class="row">
                                                 <div class="col-sm-12">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed sed do eiusmod tempor incididunt do eiusmod tempor incididunt . </p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed sed
+                                                        do eiusmod tempor incididunt do eiusmod tempor incididunt . </p>
                                                     <small>Someone famous</small>
                                                 </div>
                                             </div>
@@ -429,7 +436,9 @@
                                         <blockquote>
                                             <div class="row">
                                                 <div class="col-sm-12">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed sed do eiusmod tempor incididunt do eiusmod tempor incididunt . .</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed sed
+                                                        do eiusmod tempor incididunt do eiusmod tempor incididunt .
+                                                        .</p>
                                                     <small>Someone famous</small>
                                                 </div>
                                             </div>
@@ -438,11 +447,16 @@
                                 </div>
                                 <!-- Bottom Carousel Indicators -->
                                 <ol class="carousel-indicators">
-                                    <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="img/counter/avatar1.png" alt="">
+                                    <li data-target="#quote-carousel" data-slide-to="0" class="active"><img
+                                            class="img-responsive " src="img/counter/avatar1.png" alt="">
                                     </li>
-                                    <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="img/counter/avatar2.png" alt="">
+                                    <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive"
+                                                                                             src="img/counter/avatar2.png"
+                                                                                             alt="">
                                     </li>
-                                    <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="img/counter/avatar3.png" alt="">
+                                    <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive"
+                                                                                             src="img/counter/avatar3.png"
+                                                                                             alt="">
                                     </li>
                                 </ol>
                             </div>
@@ -459,7 +473,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title text-center wow fadeInDown">
-                        <h2>Perguntas Frequentes</h2>    
+                        <h2>Perguntas Frequentes</h2>
                         <p>Talvez os t�picos abaixo possam lhe ajudar a encontrar o que voc� procura.</p>
                     </div>
                 </div>
@@ -472,19 +486,21 @@
                 </div>
                 <div class="col-xs-12 col-md-6">
                     <div class="theme-collapse">
-                    		<div class="panel-group">
+                        <div class="panel-group">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" href="#collapse2">
-                                        <i class="fa fa-plus"></i>
-                                        Como posso adquirir um pacote de mensagens?</a>
+                                            <i class="fa fa-plus"></i>
+                                            Como posso adquirir um pacote de mensagens?</a>
                                     </h4>
                                 </div>
                                 <div id="collapse2" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <p>Só precisa criar uma conta gratuita ou selecionar um plano <a href="#pricing" class="smoothscroll">aqui</a>, acessar sua conta, e escolher um
-                                           pacote espec�fico e pagar o valor respectivo. Pronto!
+                                        <p>Só precisa criar uma conta gratuita ou selecionar um plano <a href="#pricing"
+                                                                                                         class="smoothscroll">aqui</a>,
+                                            acessar sua conta, e escolher um
+                                            pacote espec�fico e pagar o valor respectivo. Pronto!
                                         </p>
                                     </div>
                                 </div>
@@ -495,13 +511,14 @@
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" href="#collapse1">
-                                        <i class="fa fa-plus"></i>
-                                        Pacotes acima de 100.000 envios. O MBS consegue me atender?</a>
+                                            <i class="fa fa-plus"></i>
+                                            Pacotes acima de 100.000 envios. O MBS consegue me atender?</a>
                                     </h4>
                                 </div>
                                 <div id="collapse1" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <p>Entre em contato conosco. Possuímos condi��es especiais para volumes acima de 100.000.
+                                        <p>Entre em contato conosco. Possuímos condi��es especiais para volumes acima de
+                                            100.000.
                                         </p>
                                     </div>
                                 </div>
@@ -512,14 +529,15 @@
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" href="#collapse3">
-                                        <i class="fa fa-plus"></i>
-                                        Possui algum tipo de integração?</a>
+                                            <i class="fa fa-plus"></i>
+                                            Possui algum tipo de integração?</a>
                                     </h4>
                                 </div>
                                 <div id="collapse3" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <p>Se voc� � um desenvolvedor de software ou profissional da �rea, oferecemos tamb�m uma 
-                                        API para envio de mensagens de SMS e Whatsapp, 
+                                        <p>Se voc� � um desenvolvedor de software ou profissional da �rea, oferecemos
+                                            tamb�m uma
+                                            API para envio de mensagens de SMS e Whatsapp,
                                         </p>
                                     </div>
                                 </div>
@@ -530,13 +548,13 @@
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" href="#collapse5">
-                                        <i class="fa fa-plus"></i>
-                                        Quais s�o os m�todos de pagamento dispon�veis?</a>
+                                            <i class="fa fa-plus"></i>
+                                            Quais s�o os m�todos de pagamento dispon�veis?</a>
                                     </h4>
                                 </div>
                                 <div id="collapse5" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <p>Voc� pode pagar por cart�o de cr�dito, Paypal e PagSeguro. 
+                                        <p>Voc� pode pagar por cart�o de cr�dito, Paypal e PagSeguro.
                                         </p>
                                     </div>
                                 </div>
@@ -547,8 +565,8 @@
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" href="#collapse7">
-                                        <i class="fa fa-plus"></i>
-                                        Os pacotes de mensagens t�m prazo de validade?</a>
+                                            <i class="fa fa-plus"></i>
+                                            Os pacotes de mensagens t�m prazo de validade?</a>
                                     </h4>
                                 </div>
                                 <div id="collapse7" class="panel-collapse collapse">
@@ -566,13 +584,14 @@
     </div>
     <!-- Keywrod Research Area Ends -->
     <!-- Hire us Area Starts -->
-    <div class="hireus-area area-padding fundoDegrade" >
+    <div class="hireus-area area-padding fundoDegrade">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
                     <div class="content-box">
                         <h2 class="title">Contrate-nos</h2>
-                        <p>Aumente seu n�mero de clientes ou crie fidelidade a sua marca de uma maneira inteligente, exitosa e moderna.
+                        <p>Aumente seu n�mero de clientes ou crie fidelidade a sua marca de uma maneira inteligente,
+                            exitosa e moderna.
                         </p>
                         <p>Cadastra-se e comece a enviar mensagens em massa via WhatsApp!</p>
                         <div class="gap-20"></div>
@@ -592,12 +611,12 @@
     <div id="pricing">
         <div class="container">
             <div class="section-title text-center wow fadeInUp">
-                <h2>Planos</h2>    
+                <h2>Planos</h2>
                 <p>Encontre o plano certo para voc�</p>
             </div>
             <div class="price-table-3">
                 <div class="row">
-                    <div class="col-md-4 box" >
+                    <div class="col-md-4 box">
                         <div class="price-table price-mbs-basico box_circ" align="center">
                             <ul>
                                 <li>
@@ -614,24 +633,25 @@
                                     <h3>$49,90</h3>
                                 </li>
                                 <li>
-                                  	<a href="http://mpago.la/2RTAbo" class="box_pay">
-										<img src="img/botaoPagamento/Mercadopago.png" width="120" height="120">
-									</a>		
-									<a class="box_pay transparente"  ></a>
-									<a href="http://pag.ae/7UN_6xFHG" class="box_pay">
-										<img src="img/botaoPagamento/PagSeguro.png" width="120" height="120">
-									</a>
-									<a class="box_pay transparente"  ></a>							
-									<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RF7WYVZSTYMDW" class="box_pay">
-										<img src="img/botaoPagamento/PayPal.svg.png" width="120" height="120">
-									</a>									
+                                    <a href="http://mpago.la/2RTAbo" class="box_pay">
+                                        <img src="img/botaoPagamento/Mercadopago.png" width="120" height="120">
+                                    </a>
+                                    <a class="box_pay transparente"></a>
+                                    <a href="http://pag.ae/7UN_6xFHG" class="box_pay">
+                                        <img src="img/botaoPagamento/PagSeguro.png" width="120" height="120">
+                                    </a>
+                                    <a class="box_pay transparente"></a>
+                                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RF7WYVZSTYMDW"
+                                       class="box_pay">
+                                        <img src="img/botaoPagamento/PayPal.svg.png" width="120" height="120">
+                                    </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 box">
-                        <div class="price-table price-mbs-avancado table-active box_circ" >
+                        <div class="price-table price-mbs-avancado table-active box_circ">
                             <ul>
                                 <li>
                                     <img src="img/price/M2estrelas.png" class="price-icon" alt="">
@@ -646,14 +666,15 @@
                                 <li>
                                     <h3>R$69,90 </h3>
                                 </li>
-                                <li >
-                                  	<a  href="#cadastro"class='btn btn-primary btn-mbs-fill-sqr smoothscroll'>Assine Agora</a>									
+                                <li>
+                                    <a href="#cadastro" class='btn btn-primary btn-mbs-fill-sqr smoothscroll'>Assine
+                                        Agora</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-4 box">
-                        <div class="price-table price-mbs-premium box_circ" >
+                        <div class="price-table price-mbs-premium box_circ">
                             <ul>
                                 <li>
                                     <img src="img/price/M3estrelas.png" class="price-icon" alt="">
@@ -669,7 +690,8 @@
                                     <h3>R$99,90 </h3>
                                 </li>
                                 <li>
-                                	<a  href="#cadastro"class='btn btn-primary btn-mbs-fill-sqr smoothscroll'>Assine Agora</a>									
+                                    <a href="#cadastro" class='btn btn-primary btn-mbs-fill-sqr smoothscroll'>Assine
+                                        Agora</a>
                                 </li>
                             </ul>
                         </div>
@@ -678,62 +700,69 @@
             </div>
         </div>
     </div>
-  
-	<div class="newsletter contact-area area-padding fundoDegrade" id="cadastro" >
+
+    <div class="newsletter contact-area area-padding fundoDegrade" id="cadastro">
         <div class="container">
             <div class="row">
                 <div class="section-title">
-                <h2><span>FACA SEU</span> CADASTRO</h2>
-                <p>D�vidas ? Cadastre-se e tenha acesso agora. � r�pido, simples e f�cil.!</p>
-            </div>
+                    <h2><span>FACA SEU</span> CADASTRO</h2>
+                    <p>D�vidas ? Cadastre-se e tenha acesso agora. � r�pido, simples e f�cil.!</p>
+                </div>
             </div>
             <div class="row">
                 <div class="col-xs-12 col-md-7">
                     <div class="contact-form">
                         <div class="cf-msg"></div>
-                        
-                        <form class="form-horizontal" method="POST" >
- 
-                        
+
+                        <form class="form-horizontal" method="POST">
+
+
                             <div class="row">
-                            	
+
                                 <div class="col-xs-12">
                                     <p>
                                         <label>Nome <span class="asteric">*</span></label>
-                                        <input type="text" class="form-control" id="nome" autofocus="autofocus" placeholder="ex.: Maria Rita" required>
+                                        <input type="text" class="form-control" id="nome" autofocus="autofocus"
+                                               placeholder="ex.: Maria Rita" required>
                                     </p>
                                 </div>
                                 <div class="col-xs-12 col-sm-6">
                                     <p>
- 									   <label for="cpf">CNPJ/CPF</label><span class="asteric">*</span>
-                                        <input type="text" class="form-control" id="cpfCnpj" name="cpfCnpj" placeholder="ex.: 87.792.562/0001-01">
+                                        <label for="cpf">CNPJ/CPF</label><span class="asteric">*</span>
+                                        <input type="text" class="form-control" id="cpfCnpj" name="cpfCnpj"
+                                               placeholder="ex.: 87.792.562/0001-01">
                                     </p>
                                 </div>
                                 <div class="col-xs-12 col-sm-6">
                                     <p>
                                         <label>Telefone <span class="asteric">*</span></label>
-                                        <input class="form-control" id="telefone" name="telefone" placeholder="ex.: (11) 99878-8790" required>
+                                        <input class="form-control" id="telefone" name="telefone"
+                                               placeholder="ex.: (11) 99878-8790" required>
                                     </p>
                                 </div>
                                 <div class="col-xs-12">
                                     <p>
                                         <label>Seu Email <span class="asteric">*</span></label>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="ex.: maria.rita@gmail.com" required>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                               placeholder="ex.: maria.rita@gmail.com" required>
                                     </p>
                                 </div>
                                 <div class="col-xs-12">
                                     <p>
-                                        <div class="g-recaptcha" data-sitekey="6LfDlloUAAAAAAyT74jtZScPAuX29XIlKKK3m7pi"></div>
+                                    <div class="g-recaptcha"
+                                         data-sitekey="6LfDlloUAAAAAAyT74jtZScPAuX29XIlKKK3m7pi"></div>
                                     </p>
                                 </div>
 
                                 <div class="col-xs-12">
                                     <p>
-                                        <button type="submit" class="btn btn-default btn-mbs-fill-sqr" id="submit">Cadastrar</button>
+                                        <button type="submit" class="btn btn-default btn-mbs-fill-sqr" id="submit">
+                                            Cadastrar
+                                        </button>
                                     </p>
                                 </div>
                             </div>
-                        </form:form>
+                            </form:form>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-4 col-md-offset-1">
@@ -764,15 +793,15 @@
             </div>
         </div>
     </div>
-      
-      
-      <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
 
-<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
-      
+
+    <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+
+    <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+
     <!-- Newsletter Area Ends -->
     <!-- Footer Area Starts -->
-    
+
     <div class="footer-area area-padding">
         <div class="container">
             <div class="footer-top">
@@ -780,9 +809,12 @@
                     <div class="col-xs-12 col-sm-4">
                         <div class="footer-widget">
                             <h4 class="title">Sobre o MBS</h4>
-                            <p>O MBS � uma plataforma de comunica��o cross channel especializada no envio de campanhas de 
-                            	   marketing e publicidade para os usu�rios do aplicativo de maior sucesso no mundo, o WhatsApp. 
-                            	   Enviamos sua campanha de marketing ou publicidade para qualquer quantidade de usu�rios no mundo.</p>
+                            <p>O MBS � uma plataforma de comunica��o cross channel especializada no envio de campanhas
+                                de
+                                marketing e publicidade para os usu�rios do aplicativo de maior sucesso no mundo, o
+                                WhatsApp.
+                                Enviamos sua campanha de marketing ou publicidade para qualquer quantidade de usu�rios
+                                no mundo.</p>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4">
@@ -795,7 +827,7 @@
                             </ul>
                         </div>
                     </div>
-					<div class="col-xs-12 col-sm-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="footer-widget">
                             <h4 class="title">Baixe o APP</h4>
                             <ul>
@@ -803,7 +835,7 @@
                                 <li><a href="#services" class="smoothscroll">IOS</a></li>
                             </ul>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -834,7 +866,7 @@
                             </div>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
         </div>
@@ -852,6 +884,7 @@
             </div>
         </div>
     </div>
+</div>
     
      <!-- Copyright Area Ends -->
     <!-- Scripts -->
