@@ -269,11 +269,15 @@ Version: 1.0
     .card {
         border-radius: 0;
         box-shadow: none;
-        padding: 5rem 2rem;
+        padding: 5rem 2rem 2rem 2rem;
     }
 
     .icon-box {
         padding: 0;
+    }
+
+    .icon-box .icon-content {
+        padding-bottom: 0;
     }
 
 
@@ -298,7 +302,7 @@ Version: 1.0
     }
     .btn, a.btn {
         margin-right: 15px;
-        padding: 0px 20px;
+        padding: 0px 8rem;
     }
     /* Typography */
     h1 {
@@ -385,13 +389,35 @@ Version: 1.0
     .hero-content .caption-text {
         font-size: 16px;
         line-height: 27px;
-        margin-bottom: 20px;
+        margin-bottom: 5rem;
     }
     /*Free Trial*/
     .free-trial{
         padding-top: 0px;
     }
-    /* Our Motto Area */
+
+    .free-trial .trial-img {
+        visibility: hidden;
+    }
+
+    .free-trial__row {
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    .free-trial__row--icon {
+        margin-bottom: 2rem;
+    }
+
+    .free-trial h2 {
+        font-size: 3rem;
+    }
+
+    .free-trial ul li:last-child {
+        padding-bottom: 0;
+    }
+        /* Our Motto Area */
     .our-motto-area{
         padding-bottom: 50px;
     }
@@ -471,3 +497,22 @@ Version: 1.0
 /* Wide Mobile Layout: 480px. */
 
 @media only screen and (min-width: 240px) and (max-width: 480px) {}
+
+@media only screen and (max-width: 1200px) {
+    .free-trial {
+        background-color: #663ab6;
+        transform: translateY(-12rem);
+        padding: 4rem 0;
+    }
+
+    .free-trial__text:after {
+        visibility: hidden;
+    }
+
+    .free-trial .trial-img {
+        width: 100%;
+        position: absolute;
+        top: 96px;
+        left: 50px;
+    }
+}
