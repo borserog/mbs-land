@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="326a4922-b808-4b24-b522-c3a4eccd214d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +74,7 @@
       <workItem from="1572565231071" duration="74000" />
       <workItem from="1572639544116" duration="11887000" />
       <workItem from="1572662385639" duration="1392000" />
-      <workItem from="1572803376388" duration="8512000" />
+      <workItem from="1572803376388" duration="8724000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/borserog/mbs-land&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;css/style.css">
       <created>1572662394138</created>
