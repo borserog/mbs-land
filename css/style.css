@@ -1009,15 +1009,16 @@ p a:visited {
 /*** 14. Hero Area   ***/
 /***********************/
 .hero-area {
-    width: 100%;
+    width: 102%;
     height: 85vh;
     position: relative;
     z-index: 0;
     overflow: hidden;
-    background: #3083a7 url(../img/team/shopping2.png);
+    background: #3083a7 url(../img/team/shopping3.jpg);
     -webkit-background-size: cover;
     background-size: cover;
     clip-path: ellipse(1350px 62% at 50% 37%);
+    left: -2px;
 }
 
 
