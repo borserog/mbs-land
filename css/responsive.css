@@ -178,6 +178,10 @@ Version: 1.0
     .hero-content .hero-content-inner {
         text-align: center;
     }
+
+    .hero-content .hero-content-inner img {
+        visibility: hidden;
+    }
     .hero-content .title {
         font-size: 32px;
         line-height: 36px;
@@ -186,7 +190,7 @@ Version: 1.0
     .hero-content .caption-text {
         font-size: 16px;
         line-height: 27px;
-        margin-bottom: 20px;
+        margin-bottom: 5rem;
     }
     /* Our Motto Area */
     .img-icon-box {
@@ -368,6 +372,10 @@ Version: 1.0
         color: #fff;
     }
     /* Hero Area */
+    .hero-area {
+        min-height: 520px;
+    }
+
     .hero-content {
         min-width: inherit;
         min-height: inherit;
@@ -377,7 +385,10 @@ Version: 1.0
     .hero-img {
         display: none !important;
     }
-
+    .hero-saiba-mais:hover {
+        color: #FFF;
+        border: 2px solid #FFF;
+    }
     .hero-content .hero-content-inner {
         text-align: center;
     }

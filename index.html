@@ -30,55 +30,7 @@
           content="O Manaíra Bairro Shopping(MBS), é uma nova forma de conhecer e comprar produtos e serviços na região de Manaíra; bairro com mais de 3 mil empresas instaladas. O MBS oferece agilidade, comodidade, segurança e promoções exclusivas. É aqui onde consumidores e empresários se encontram" />
 	<meta property="og:image" itemprop="image" content="http://www.manairabairroshopping.com/img/logo.png">
 	<meta property="og:type" content="website" />
-    
-    <script type="text/javascript">
 
-	    window.onload=function(){
-            $(document).ready(function(){
-                $(this).scrollTop(0);
-            });
-			$("#cpfCnpj").keydown(function(){
-			    try {
-			    	$("#cpfCnpj").unmask();
-			    } catch (e) {}
-			    
-			    var tamanho = $("#cpfCnpj").val().length;
-				
-			    if(tamanho < 11){
-			        $("#cpfCnpj").mask("999.999.999-99");
-			    } else if(tamanho >= 11){
-			        $("#cpfCnpj").mask("99.999.999/9999-99");
-			    }
-			    
-			    // ajustando foco
-			    var elem = this;
-			    setTimeout(function(){
-			    	// mudo a posi��o do seletor
-			    	elem.selectionStart = elem.selectionEnd = 10000;
-			    }, 0);
-			    // reaplico o valor para mudar o foco
-			    var currentValue = $(this).val();
-			    $(this).val('');
-			    $(this).val(currentValue);
-			});
-			
-			$('#telefone')  
-		    .mask("(99) 99999-9999")  
-		        .live('focusout', function (event) {  
-		            var target, phone, element;  
-		            target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
-		            phone = target.value.replace(/\D/g, '');  
-		            element = $(target);  
-		            element.unmask();  
-		            if(phone.length < 10) {  
-		                element.mask("(99) 9999-9999");  
-		            } else {  
-		                element.mask("(99) 99999-9999");  
-		            }  
-		        });
-	    }
-	</script>
-    
     
 </head>
 
@@ -138,8 +90,8 @@
                             <h2 class="title">Agora os lojistas da grande Manaíra têm um aplicativo para chamar de
                                 seu</h2>
                             <p class="caption-text">Faça parte do maior shopping da Paraíba</p>
-                            <a href="#pricing" id="hero-button" class="btn btn-default btn-mbs-fill-round smoothscroll
-                            ">CONTRATE</a>
+                            <a href="#about" class="hero-saiba-mais smoothscroll
+                            "><i class="fa fa-arrow-down" aria-hidden="true"></i>Saiba mais!</a>
                         </div>
                     </div>
                 </div>
@@ -895,6 +847,7 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/customJs.js"></script>
     
 </body>
 
