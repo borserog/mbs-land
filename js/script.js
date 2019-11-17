@@ -74,7 +74,7 @@ jQuery(window).scroll(function () {
         var navHeight = $('.navbar-default').height();
 
         $('html, body').stop().animate({
-            'scrollTop': $(target).offset().top - 110
+            'scrollTop': $(target).offset().top - 50
         }, 1200);
     });
 

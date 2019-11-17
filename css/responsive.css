@@ -90,8 +90,7 @@ Version: 1.0
         padding-left: 50px;
     }
     .icon-box .icon-left {
-        width: 40px;
-        margin-right: 15px;
+
     }
     .icon-box .icon-left span {
         font-size: 30px;
@@ -267,13 +266,14 @@ Version: 1.0
 @media only screen and (max-width: 767px) {
     /* General */
     .area-padding {
-        padding: 70px 0px;
+        padding: 0;
     }
 
     .card {
         border-radius: 0;
         box-shadow: none;
         padding: 5rem 2rem 2rem 2rem;
+        margin-bottom: 0;
     }
 
     .icon-box {
@@ -373,7 +373,8 @@ Version: 1.0
     }
     /* Hero Area */
     .hero-area {
-        min-height: 520px;
+        background-position-x: 60%;
+        height: 100vh;
     }
 
     .hero-content {
@@ -400,7 +401,7 @@ Version: 1.0
     .hero-content .caption-text {
         font-size: 16px;
         line-height: 27px;
-        margin-bottom: 5rem;
+        margin-bottom: 6rem;
     }
     /*Free Trial*/
     .free-trial{
@@ -430,7 +431,7 @@ Version: 1.0
     }
         /* Our Motto Area */
     .our-motto-area{
-        padding-bottom: 50px;
+        padding-bottom: 0;
     }
     .img-icon-box {
         margin-bottom: 30px;
@@ -452,7 +453,7 @@ Version: 1.0
     }
     .col-xs-12:last-child .pricing-table,
     .col-xs-12:last-child .blog-grid {
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
     /* Newsletter Area */
     .newsletter-form {
@@ -512,7 +513,6 @@ Version: 1.0
 @media only screen and (max-width: 1200px) {
     .free-trial {
         background-color: #663ab6;
-        transform: translateY(-12rem);
         padding: 4rem 0;
     }
 
@@ -525,5 +525,11 @@ Version: 1.0
         position: absolute;
         top: 96px;
         left: 50px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .trial-img {
+        visibility: hidden;
     }
 }

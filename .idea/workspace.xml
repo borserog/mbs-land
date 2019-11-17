@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="326a4922-b808-4b24-b522-c3a4eccd214d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/customJs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/congruent_outline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/dark-triangles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/illustrio/SMS-6kELph70.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/illustrio/map-e_hDzZ5E.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/illustrio/precious time-HfCVdYqF.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/illustrio/project-sr2WRlHg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/illustrio/sound-8GQtStsi.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/triangle-mosaic.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/responsive.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
@@ -30,12 +36,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SnMIa6iE9e5db1XzE5Jrpr3omB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/img/illustrio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -45,15 +53,16 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/img/undraw" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/img/illustrio" />
       <recent name="$PROJECT_DIR$/img" />
+      <recent name="$PROJECT_DIR$/img/illustrio" />
       <recent name="$PROJECT_DIR$/img/undraw" />
       <recent name="$PROJECT_DIR$/img/mbs" />
       <recent name="$PROJECT_DIR$/img/team" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img/illustrio" />
+      <recent name="$PROJECT_DIR$/img/undraw" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -87,7 +96,8 @@
       <workItem from="1572639544116" duration="11887000" />
       <workItem from="1572662385639" duration="1392000" />
       <workItem from="1572803376388" duration="9385000" />
-      <workItem from="1573915260886" duration="3668000" />
+      <workItem from="1573915260886" duration="4094000" />
+      <workItem from="1574010567995" duration="9456000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/borserog/mbs-land&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;css/style.css">
       <created>1572662394138</created>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" style="width: 100%; height: 100%;"><desc>Made with illustrio</desc>
+  
+<g class="content"><path class="secondary-fill" d="M55 40h5c2.8 0 5-2.2 5-5s-2.2-5-5-5h-7.5c-2.8 0-5-2.2-5-5s2.2-5 5-5 5-2.2 5-5-2.2-5-5-5h-35c-2.8 0-5 2.2-5 5s2.2 5 5 5H20c2.8 0 5 2.2 5 5s-2.2 5-5 5H10c-2.8 0-5 2.2-5 5s2.2 5 5 5h15c2.8 0 5 2.2 5 5s-2.2 5-5 5h-7.5c-2.8 0-5 2.2-5 5s2.2 5 5 5h40c2.8 0 5-2.2 5-5s-2.2-5-5-5H55c-2.8 0-5-2.2-5-5s2.2-5 5-5z" style="fill-opacity: 0.3;"></path><g class="white-layer"><g fill="#ffffff" fill-rule="evenodd" stroke="none">
+    
+    
+    <path fill="#ffffff" d="M17.2941176,0.149132941 C7.74287829,0.149132941 0,7.89196059 0,17.4432506 C0,26.9945447 7.74287829,34.7373682 17.2941176,34.7373682 C26.845399,34.7373682 34.5882353,26.9945447 34.5882353,17.4432506 C34.5882353,7.89196059 26.845399,0.149132941 17.2941176,0.149132941 Z M23.8823529,10.8550153 L18.9411765,25.6785447 L16.0588235,18.6785447 L9.05882353,15.7961918 L23.8823529,10.8550153 Z" transform="translate(17.706 17.557)" stroke="none"></path>
+  </g></g><g class="shifted" transform="matrix(1,0,0,1,1.5,0)" style="fill-opacity: 0.3;"><g fill="none" fill-rule="evenodd" stroke="none" class="main-fill">
+    
+    
+    <path fill="none" d="M17.2941176,0.149132941 C7.74287829,0.149132941 0,7.89196059 0,17.4432506 C0,26.9945447 7.74287829,34.7373682 17.2941176,34.7373682 C26.845399,34.7373682 34.5882353,26.9945447 34.5882353,17.4432506 C34.5882353,7.89196059 26.845399,0.149132941 17.2941176,0.149132941 Z M23.8823529,10.8550153 L18.9411765,25.6785447 L16.0588235,18.6785447 L9.05882353,15.7961918 L23.8823529,10.8550153 Z" transform="translate(17.706 17.557)" stroke="none" class="main-fill"></path>
+  </g></g><g class="base"><g fill="none" fill-rule="evenodd" stroke="none" class="main-stroke--darken">
+    
+    
+    <path fill="none" d="M17.2941176,0.149132941 C7.74287829,0.149132941 0,7.89196059 0,17.4432506 C0,26.9945447 7.74287829,34.7373682 17.2941176,34.7373682 C26.845399,34.7373682 34.5882353,26.9945447 34.5882353,17.4432506 C34.5882353,7.89196059 26.845399,0.149132941 17.2941176,0.149132941 Z M23.8823529,10.8550153 L18.9411765,25.6785447 L16.0588235,18.6785447 L9.05882353,15.7961918 L23.8823529,10.8550153 Z" transform="translate(17.706 17.557)" stroke="none" class="main-stroke--darken"></path>
+  </g></g></g><style>
+          .main-fill {fill: #fd6e3e;}
+          .main-stroke {stroke: #fd6e3e;}
+          .secondary-fill {fill: #673ab7;}
+          .secondary-stroke {stroke: #673ab7;}
+
+          .main-fill--darken {fill: #ec3d02;}
+          .main-stroke--darken {stroke: #ec3d02;}
+          .secondary-fill--darken {fill: #46287d;}
+          .secondary-stroke--darken {stroke: #46287d;}
+
+          .main-fill--darkener {fill: #ba3002;}
+          .main-stroke--darkener {stroke: #ba3002;}
+          .secondary-fill--darkener {fill: #301b56;}
+          .secondary-stroke--darkener {stroke: #301b56;}
+        </style></svg>
