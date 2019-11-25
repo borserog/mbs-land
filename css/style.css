@@ -1072,7 +1072,9 @@ p a:visited {
 .hero-saiba-mais:active {
     color: #bb5e34;
     border: 0.3rem solid #bb5e34;
+    transform: scale(0.9);
 }
+
 
 .hero-saiba-mais:hover {
     color: #fd6e3e;
@@ -1095,6 +1097,10 @@ p a:visited {
 }
 .hero-carousel .owl-dots {
     bottom: -35px;
+}
+
+.hero-img img {
+    transform: scale(1.2);
 }
 /* Home Version 3 */
 .hero-gradiant {
